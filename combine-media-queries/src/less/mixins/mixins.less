@@ -1,0 +1,19 @@
+@images: '../images';
+@retina: 'only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx)';
+
+.retina-image(@image, @width, @height, @extension) {
+    background-image: url("@{images}/@{image}.@{extension}");
+    @media @retina {
+        background-image: url("@{images}/@{image}@2x.@{extension}");
+        background-size: @width @height;
+    }
+}
+
+.logo {
+    .retina-image(logo, 100px, 75px, png);
+    background-repeat: no-repeat;
+}
+
+.my-image {
+    .retina-image(my-image, 50px, 50px, png);
+}

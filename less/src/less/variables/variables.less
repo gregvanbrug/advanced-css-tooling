@@ -1,0 +1,17 @@
+@blue: #93B5E5;
+
+.logo {
+    color: @blue;
+}
+
+.button {
+    color: @blue;
+
+    &:hover {
+        color: tint( @blue, 10% );
+    }
+
+    &:active {
+        color: shade( @blue, 10% );
+    }
+}

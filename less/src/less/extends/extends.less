@@ -1,0 +1,30 @@
+@white: white;
+@grey-10: shade(@white, 10%);
+@grey-20: shade(@white, 20%);
+
+@primary-blue: #7190d6;
+@secondary-green: #BED84C;
+
+.button {
+
+    padding: 5px;
+    color: @white;
+    border: 0;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    &:disabled {
+        color: @grey-20;
+        background-color: @grey-10;
+    }
+
+}
+
+.button-primary {
+    &:extend( .button );
+    background-color: @primary-blue;
+}
+
+.button-secondary {
+    &:extend( .button all );
+    background-color: @secondary-green;
+}

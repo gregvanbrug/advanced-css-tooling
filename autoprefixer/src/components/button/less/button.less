@@ -1,0 +1,25 @@
+.button {
+
+    padding: 5px;
+    background: linear-gradient(to bottom, @primary-blue 0%, tint(@primary-blue, 20%) 100%);
+    color: @white;
+    border: 0;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    &:disabled {
+        color: @grey-20;
+        background-color: @grey-10;
+    }
+
+}
+
+.button-primary {
+    &:extend( .button );
+    background-color: @primary-blue;
+}
+
+.button-secondary {
+    &:extend( .button all );
+    background-color: @secondary-green;
+}

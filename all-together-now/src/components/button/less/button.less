@@ -1,0 +1,22 @@
+// -------------------------------------------------------------------
+// Button Component Styles
+// -------------------------------------------------------------------
+
+.css-button {
+    padding: 10px 20px;
+    .font-size(20);
+    background-color: @ic-blue;
+    color: white;
+    border-radius: 3px;
+    border: transparent;
+    text-align: center;
+
+    &:hover {
+        background-color: tint( @ic-blue, 10% );
+    }
+
+    &:active {
+        background-color: shade( @ic-blue, 10% );
+    }
+
+}

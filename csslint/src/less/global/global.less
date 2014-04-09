@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+#wrapper {
+    width: 1020px;
+}
+
+.content {
+    width: 900px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.button {
+    padding: 5px;
+    border: 0px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+
+    &.state-disabled {
+        color: @grey-10;
+        background-color: @grey-10;
+    }
+
+}
+
+.button-primary {
+    &:extend( .button );
+    background-color: @primary-blue;
+    padding: 2px !important;
+}
+
+.button-secondary {
+    &:extend( .button all );
+    background-color: @secondary-green;
+}

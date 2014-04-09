@@ -1,0 +1,12 @@
+{
+  "name": "advanced-css-tooling",
+  "version": "0.0.1",
+  "authors": [
+    "Greg van Brug"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "normalize-css": "~2.1.3"
+  },
+  "devDependencies": {}
+}

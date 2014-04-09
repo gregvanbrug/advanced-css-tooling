@@ -1,0 +1,29 @@
+{
+  "name": "advanced-css-tooling",
+  "description": "Demo files for a presentation on Advanced CSS Tooling",
+  "version": "0.1.0",
+  "author": {
+    "name": "Greg van Brug",
+    "url": "http://gregvanbrug.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:gregvanbrug/advanced-css-tooling.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4",
+    "grunt-autoprefixer": "latest",
+    "grunt-contrib-clean": "latest",
+    "grunt-contrib-copy": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-csslint": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-jshint": "latest",
+    "grunt-contrib-watch": "latest",
+    "grunt-combine-media-queries": "latest",
+    "grunt-image-embed": "latest",
+    "grunt-less-imports": "latest",
+    "grunt-uncss": "latest",
+    "matchdep": "latest"
+  }
+}

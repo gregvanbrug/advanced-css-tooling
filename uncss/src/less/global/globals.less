@@ -1,0 +1,44 @@
+// -------------------------------------------------------------------
+// Global HTML Element Styles
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+// NOTE: Be EXTREMELY careful when styling html elements. In most,
+// cases you probably shouldn't be styling a html element at all.
+// These are just here to overwrite some things in normalize, so we
+// don't need to 'reset' some things.
+// -------------------------------------------------------------------
+
+html {
+    font-size: 10px;
+}
+
+body {
+    .font-size(@base-font-size);
+    .line-height(@base-line-height);
+    font-family: @Inconsolata;
+    color: @grey-50;
+    background-color: @grey-05;
+}
+
+h1, h2, h3, h4, h5 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: black;
+}
+
+a {
+
+    color: @ic-link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: lighten( @ic-link-color, 10% );
+    }
+
+    &:active {
+        color: darken( @ic-link-color, 10% );
+    }
+
+}
+

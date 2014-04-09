@@ -1,0 +1,93 @@
+// -------------------------------------------------------------------
+//  Vars
+// -------------------------------------------------------------------
+
+@width: 1020;
+@columns: 12;
+@column: 0;
+
+// PX based layouts: @size: ( @width/@columns ) * @column;
+@size: @column/@columns;
+
+.clearfix {
+    // *zoom: 1;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
+
+// -------------------------------------------------------------------
+//  Grid
+// -------------------------------------------------------------------
+
+.container(...) {
+    &:extend( .clearfix all );
+    width: unit( @width, px );
+    margin-right: auto;
+    margin-left: auto;
+    @media @phone {
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+.column( @column ) {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    width: percentage( @size );
+    @media @phone {
+        float: none;
+        width: 100%;
+    }
+}
+
+.padding-left( @column ) {
+    padding-left: percentage( @size );
+    @media @phone {
+        padding-left: 0;
+    }
+}
+
+.padding-right( @column ) {
+    padding-right: percentage( @size );
+    @media @phone {
+        padding-right: 0;
+    }
+}
+
+.margin-left( @column ) {
+    margin-left: percentage( @size );
+    @media @phone {
+        margin-left: 0;
+    }
+}
+
+.margin-right( @column ) {
+    margin-right: percentage( @size );
+    @media @phone {
+        margin-right: 0;
+    }
+}
+
+.push( @column ) {
+    padding-left: percentage( @size );
+    @media @phone {
+        padding-left: 0;
+    }
+}
+
+.pull( @column ) {
+    margin-left: percentage( @size * -1 );
+    @media @phone {
+        margin-left: 0;
+    }
+}
